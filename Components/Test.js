@@ -1,17 +1,47 @@
 import React from 'react'
 
-import {StyleSheet,View, Platform} from 'react-native'
+import {StyleSheet,View, Platform, Animated, Easing, PanResponder, Dimensions} from 'react-native'
 
 
 import HelloWorld from './HelloWorld'
 
 class Test extends React.Component{
 
+
+    
+
+    constructor(props){
+        super(props)
+        this.state = {
+            topPosition: 0,
+            leftPosition: 0,
+        }
+
+        var { height, width } = Dimensions.get('window')
+        this.panResponder = PanResponder.create({
+            onStartShouldSetPanResponder:(evt, gestureState) => true,
+            onPanResponderMove: (evt, gestureState) => {
+                let touches = evt.nativeEvent.touches
+                if (touches.length == 1){
+                    this.setState({
+                        topPosition: touches[0].pageY - height/2,
+                        leftPosition: touches[0].pageX - width/2
+                    })
+                }
+            }
+        })
+    }
+    
+    
+
     render(){
         return(
 
             <View style={styles.main_container}>
-                <HelloWorld />
+                <View 
+                {...this.panResponder.panHandlers}
+                style={[styles.animation_view, { top: this.state.topPosition, left: this.state.leftPosition}]}>
+                </View>
             </View>
 
         )
@@ -22,6 +52,11 @@ class Test extends React.Component{
 
 const styles = StyleSheet.create({
 
+    animation_view: {
+        backgroundColor:'red',
+        width:100,
+        height:100
+      },
     main_container: {
         flex: 1,
         justifyContent: 'center',

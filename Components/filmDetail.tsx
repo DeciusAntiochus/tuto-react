@@ -9,6 +9,7 @@ import moment from 'moment'
 import numeral from 'numeral'
 
 import { connect } from 'react-redux'
+import EnlargeShrink from '../Animations/EnlagreShrink';
 
 type MyProps = {navigation:any, dispatch:any, favoritesFilm:any}
 type MyState = {isLoading:boolean, film:any}
@@ -92,11 +93,12 @@ class FilmDetail extends React.Component<MyProps,MyState> {
     
 
     var sourceImage = require('../assets/img/fav_off.png')
+    var shouldEnlarge = false
 
     if (this.props.favoritesFilm.findIndex(item => item.id === this.state.film.id) !== -1) {
 
         sourceImage = require('../assets/img/fav_on.png')
-
+        shouldEnlarge = true
 
     }
 
@@ -104,10 +106,13 @@ class FilmDetail extends React.Component<MyProps,MyState> {
 
     return (
 
+      <EnlargeShrink shouldEnlarge={shouldEnlarge}>
         <Image
             style={styles.favorite_image}
             source={sourceImage}
-        />
+        />  
+      </EnlargeShrink>
+        
         
 
     )
@@ -232,8 +237,9 @@ const styles = StyleSheet.create({
     flex: 1
   },
   favorite_image : {
-      width:40,
-      height: 40
+      flex:1,
+      width:null,
+      height:null
   },
   favorite_container: {
 
@@ -285,7 +291,7 @@ const mapStateToProps = (state) => {
     
     return {
 
-        favoritesFilm: state.favoritesFilm
+        favoritesFilm: state.toggleFavorite.favoritesFilm
 
     }
 
@@ -298,4 +304,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(FilmDetail)
+export default connect(mapStateToProps)(FilmDetail)

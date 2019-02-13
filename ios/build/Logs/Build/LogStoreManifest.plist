@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>18128637-E13C-455B-88D9-06B1E1372673</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>18128637-E13C-455B-88D9-06B1E1372673.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Tuto project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Tuto</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project Tuto with scheme Tuto and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>571749577.93307698</real>
+			<key>timeStoppedRecording</key>
+			<real>571749594.93880403</real>
+			<key>title</key>
+			<string>Building project Tuto with scheme Tuto and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>18128637-E13C-455B-88D9-06B1E1372673</string>
+		</dict>
+		<key>484D34AC-D164-4FEA-A8E8-A9625D35F433</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>484D34AC-D164-4FEA-A8E8-A9625D35F433.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>Tuto project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Tuto</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project Tuto with scheme Tuto and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>571690446.46253097</real>
+			<key>timeStoppedRecording</key>
+			<real>571690453.35351002</real>
+			<key>title</key>
+			<string>Building project Tuto with scheme Tuto and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>484D34AC-D164-4FEA-A8E8-A9625D35F433</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
